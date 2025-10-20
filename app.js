@@ -94,7 +94,7 @@ var editTask = function () {
   }
 
   //toggle .todo__container-edit--mode on the parent.
-  listItem.classList.toggle("todo__container-edit--mode");
+  listItem.classList.toggle("todo-container__edit-mode");
 };
 
 //Delete task.
