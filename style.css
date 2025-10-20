@@ -4,98 +4,12 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-.matrix__container {
-  width: 500px;
-  margin: 0 auto;
-  display: block;
-  text-align: right;
-}
-.matrix__container img {
-  width: 100%;
-}
-.matrix__container .matrix__container-link {
-  font-family: fantasy, cursive;
-}
 
-@media (max-width: 768px) {
-  .matrix__container {
-    text-align: center;
-  }
-}
-.todo__container {
-  display: block;
-  width: 500px;
-  margin: 0 auto 0;
-}
-.task {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
-}
-.task-row-wrapper {
-  display: flex;
-}
 ul {
   margin: 0;
   padding: 0px;
 }
-li,
-h3 {
-  list-style: none;
-}
-input,
-button {
-  outline: none;
-}
-button {
-  background: none;
-  border: 0px;
-  color: #888;
-  font-size: 15px;
-  width: 60px;
-  font-family: Lato, sans-serif;
-  cursor: pointer;
-}
-button:hover {
-  color: #3a3a3a;
-}
-/* Heading */
-.todo__container-header,
-label[for="todo__container-new--task"] {
-  color: #333;
-  font-weight: 700;
-  font-size: 15px;
-  border-bottom: 2px solid #333;
-  padding: 30px 0 10px;
-  margin: 0;
-  text-transform: uppercase;
-}
-input[type="text"] {
-  margin: 0;
-  font-size: 18px;
-  line-height: 18px;
-  height: 21px;
-  padding: 0 9px;
-  border: 1px solid #ddd;
-  background: #fff;
-  border-radius: 6px;
-  font-family: Lato, sans-serif;
-  color: #888;
-}
-input[type="text"]:focus {
-  color: #333;
-}
 
-/* New Task */
-label[for="todo__container-new--task"] {
-  display: block;
-  margin: 0 0 20px;
-}
-input#todo__container-new--task {
-  width: 318px;
-}
-
-/* Task list */
 li {
   overflow: hidden;
   padding: 20px 0;
@@ -109,43 +23,149 @@ li > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+li,
+h3 {
+  list-style: none;
+}
+
+input,
+button {
+  outline: none;
+}
+
+button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #3a3a3a;
+}
+
+.matrix__container {
+  width: 500px;
+  margin: 0 auto;
+  display: block;
+  text-align: right;
+}
+
+.matrix__container-img {
+  width: 100%;
+}
+
+.matrix__container .matrix__container-link {
+  font-family: fantasy, cursive;
+}
+
+@media (max-width: 768px) {
+  .matrix__container {
+    text-align: center;
+  }
+}
+
+.todo__container {
+  display: block;
+  width: 500px;
+  margin: 0 auto 0;
+}
+
+.task {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.task-row-wrapper {
+  display: flex;
+}
+
+/* Heading */
+.todo__container-header,
+label[for="todo__container-new--task"] {
+  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+input[type="text"] {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 21px;
+  padding: 0 9px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+
+input[type="text"]:focus {
+  color: #333;
+}
+
+/* New Task */
+label[for="todo__container-new--task"] {
+  display: block;
+  margin: 0 0 20px;
+}
+
+#todo__container-new--task {
+  width: 318px;
+}
+
+/* Task list */
+
+.edit-mode--checkbox {
   margin: 0 10px;
 }
+
 li > label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li > input[type="text"] {
+
+.task-input {
   width: 226px;
 }
-button.delete img {
+
+.todo__container-delete--img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete img:hover {
+
+.todo__container-delete--img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+#todo__container-complete--tasks {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.task-input {
   display: none;
 }
 
-ul li.todo__container-edit--mode input[type="text"] {
+.todo__container-edit--mode .task-input {
   display: inline-block;
   width: 224px;
 }
 
-ul li.todo__container-edit--mode label {
+.todo__container-edit--mode .task-label {
   display: none;
 }
