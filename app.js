@@ -7,14 +7,14 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput = document.getElementById("todo__container-new--task"); //Add a new task.
+var taskInput = document.getElementById("todo-container__new-task"); //Add a new task.
 var addButton = document.getElementsByTagName("button")[0]; //first button
 var incompleteTaskHolder = document.getElementById(
-  "todo__container-incomplete--tasks"
-); //ul of #todo__container-incomplete--tasks
+  "todo-container__incomplete-tasks"
+); //ul of #todo-container__incomplete-tasks
 var completedTasksHolder = document.getElementById(
-  "todo__container-complete--tasks"
-); //todo__container-complete--tasks
+  "todo-container__complete-tasks"
+); //todo-container__complete-tasks
 
 //New task list item
 var createNewTaskElement = function (taskString) {
@@ -59,7 +59,7 @@ var createNewTaskElement = function (taskString) {
 
 var addTask = function () {
   console.log("Add Task...");
-  //Create a new list item with the text from the #todo__container-new--task:
+  //Create a new list item with the text from the #todo-container__new-task:
   if (!taskInput.value) return;
   var listItem = createNewTaskElement(taskInput.value);
 
@@ -81,7 +81,7 @@ var editTask = function () {
   var editInput = listItem.querySelector("input[type=text]");
   var label = listItem.querySelector("label");
   var editBtn = listItem.querySelector(".edit");
-  var containsClass = listItem.classList.contains("todo__container-edit--mode");
+  var containsClass = listItem.classList.contains("todo-container__edit-mode");
   //If class of the parent is .todo__container-edit--mode
   if (containsClass) {
     //switch to .todo__container-edit--mode
