@@ -4,7 +4,7 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-.aaa {
+.matrix__container {
   width: 500px;
   margin: 0 auto;
   display: block;
@@ -13,12 +13,12 @@ body {
 .aaa img {
   width: 100%;
 }
-.aaa .more_inf {
+.matrix__container .more_inf {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
-  .aaa {
+  .matrix__container {
     text-align: center;
   }
 }
